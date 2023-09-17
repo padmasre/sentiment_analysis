@@ -20,7 +20,7 @@ if len(movie_name) > 0:
 
 # Predict review sentiment
 if len(reviews) > 0:
-  model = pickle.load(open(f'{path}/model/model.pkl', 'rb'))
+  model = pickle.load(open(f'model/model.pkl', 'rb'))
   reviews_df = pd.DataFrame(reviews)
   reviews_series = reviews_df.iloc[0,:]
   predictions = model.predict(reviews_series).tolist()
