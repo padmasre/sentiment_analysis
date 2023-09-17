@@ -33,18 +33,14 @@ if len(reviews) > 0:
   chart_data = pd.DataFrame(
       [[positive_reviews, 0],[0, negative_reviews]],
       columns=['Positive', 'Negative'])
-  st.bar_chart(
-    chart_data,
-    x='Count'
-    y=['Positive', 'Negative'],
-  )
-  for i in review_predictions:
-    if i == 1:
-      st.write("This is a positive review")
-    elif i == 0:
-      st.write("This is a negative review")
-    else:
-      print("None")
+  st.bar_chart({'Positive': positive_reviews, 'Negative': negative_reviews})
+  # for i in review_predictions:
+  #   if i == 1:
+  #     st.write("This is a positive review")
+  #   elif i == 0:
+  #     st.write("This is a negative review")
+  #   else:
+  #     print("None")
 
 ##########################################################
 # Personal profile links
