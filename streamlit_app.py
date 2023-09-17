@@ -30,20 +30,13 @@ if len(reviews) > 0:
   st.markdown("⭐Results⭐")
   st.write(f"✔️ No of Positive review: {positive_reviews}")
   st.write(f"⭕ No of Negative review: {negative_reviews}")
-  # chart_data = pd.DataFrame(
-  #     [[positive_reviews, 0],[0, negative_reviews]],
-  #     columns=['Positive', 'Negative'])
-  # st.bar_chart(
-  #   chart_data,
-  #   y=['Positive', 'Negative']
-  # )
   chart_data = pd.DataFrame(
-      [['Positive', positive_reviews],['Negative', negative_reviews]],
-      columns=['Sentiment', 'Count'])
+      [[movie_name, positive_reviews, 0],[movie_name, 0, negative_reviews]],
+      columns=['Movie','Positive', 'Negative'])
   st.bar_chart(
     chart_data,
-    x='Sentiment',
-    y='Count'
+    y=['Positive', 'Negative'],
+    color=['#FF0000','#0000FF'] 
   )
   # for i in review_predictions:
   #   if i == 1:
