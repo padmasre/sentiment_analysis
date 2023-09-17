@@ -37,7 +37,6 @@ if len(reviews) > 0:
     chart_data,
     x='Sentiment',
     y='Count',
-    color=['#FF0000','#0000FF']
   )
   for i in review_predictions:
     if i == 1:
