@@ -20,20 +20,21 @@ if len(movie_name) > 0:
 
 # Predict review sentiment
 if len(reviews) > 0:
+  st.write(reviews)
   model = pickle.load(open(f'model/model.pkl', 'rb'))
-  reviews_df = pd.DataFrame(reviews)
-  reviews_series = reviews_df.iloc[0,:]
-  predictions = model.predict(reviews_series).tolist()
-  for i in predictions:
-    if i == 1:
-      st.write("This is a positive review")
-    elif i == 0:
-      st.write("This is a negative review")
-    else:
-      print("None")
+  # reviews_df = pd.DataFrame(reviews)
+  # reviews_series = reviews_df.iloc[0,:]
+  # predictions = model.predict(reviews_series).tolist()
+  # for i in predictions:
+  #   if i == 1:
+  #     st.write("This is a positive review")
+  #   elif i == 0:
+  #     st.write("This is a negative review")
+  #   else:
+  #     print("None")
 
 ##########################################################
 # Personal profile links
 with st.sidebar:
-  st_button('linkedin', 'https://www.linkedin.com/in/padmasreers', 'linkedin.com/in/padmasreers', 20)
+  st_button('linkedin', 'https://www.linkedin.com/in/padmasree5', 'linkedin.com/in/padmasreers', 20)
   st_button('github', 'https://github.com/padmasre/sentiment_analysis', 'github.com/padmasre/sentiment_analysis', 20)
