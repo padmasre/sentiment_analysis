@@ -35,7 +35,7 @@ if len(reviews) > 0:
       columns=['Movie','Positive', 'Negative'])
   st.bar_chart(
     chart_data,
-    x='Movie'
+    x='Movie',
     y=['Positive', 'Negative'],
     color=['#c00000','#00b300'] 
   )
