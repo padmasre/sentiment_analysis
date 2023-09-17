@@ -6,14 +6,14 @@ import pandas as pd
 
 # Get User Input
 movie_name = st.text_input(
-  "Enter the name of the move here",
-  placeholder="Enter the movie name",
+  "Enter the name of the movie 🎥",
+  placeholder="Movie name",
   key="moviename"
 )
 reviews = []
 if len(movie_name) > 0:
   reviews = st.text_area(
-    "Enter movie reviews below 👇",
+    "Enter movie reviews ✍️ below 👇",
     placeholder="Enter one review per line. Example: \nThe movie was fun.\nIt was disappointing.\nThe movie had great VFX",
     key="reviews",
   )
