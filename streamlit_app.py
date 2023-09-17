@@ -27,9 +27,9 @@ if len(reviews) > 0:
   
   positive_reviews = review_predictions.count(1)
   negative_reviews = review_predictions.count(0)
-  st.markdown("========================Results========================")
-  st.write(f"No of Positive review: {positive_reviews}")
-  st.write(f"No of Negative review: {negative_reviews}")
+  st.markdown("⭐Results⭐")
+  st.write(f"✔️ No of Positive review: {positive_reviews}")
+  st.write(f"⭕ No of Negative review: {negative_reviews}")
   chart_data = pd.DataFrame(
       [[positive_reviews, 0],[0, negative_reviews]],
       columns=['Positive', 'Negative'])
