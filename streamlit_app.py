@@ -32,7 +32,7 @@ if len(reviews) > 0:
   st.write("No of Positive and Negative reviews")
   st.bar_chart(
     {'Positive': positive_reviews, 'Negative': negative_reviews},
-  colors=['Green','Red'])
+  color=['Green','Red'])
   # for i in review_predictions:
   #   if i == 1:
   #     st.write("This is a positive review")
