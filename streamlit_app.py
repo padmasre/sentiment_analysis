@@ -10,6 +10,7 @@ movie_name = st.text_input(
   placeholder="Enter the movie name.",
   key="moviename"
 )
+reviews = []
 if len(movie_name) > 0:
   reviews = st.text_area(
     "Enter movie reviews below 👇",
