@@ -53,4 +53,4 @@ if len(reviews) > 0:
 with st.sidebar:
   st.markdown('*Links to my profiles* 👇')
   st_button('linkedin', 'https://www.linkedin.com/in/padmasree5', '/padmasreers', 20)
-  st_button('github', 'https://github.com/padmasre/sentiment_analysis', '/padmasre/sentiment_analysis', 20)
+  st_button('github', 'https://github.com/padmasre/sentiment_analysis', '/padmasre', 20)
