@@ -22,15 +22,10 @@ if len(movie_name) > 0:
 if len(reviews) > 0:
   model = pickle.load(open(f'model/model.pkl', 'rb'))
   reviews = reviews.split("\n")
-  if type(reviews) == 'str':
-    reviews = [reviews]
-  reviews_df = pd.DataFrame(reviews)
-  reviews_series = reviews_df.squeeze() # Converting dataframe to series
-  review_predictions = model.predict(reviews_series).tolist()
+  review_predictions = model.predict(reviews).tolist()
   
   positive_reviews = review_predictions.count(1)
   negative_reviews = review_predictions.count(0)
-  total_review = len(reviews)
   st.write(f"No of Positive review: {positive_reviews}")
   st.write(f"No of Negative review: {negative_reviews}")
   chart_data = pd.DataFrame(
