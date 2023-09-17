@@ -15,7 +15,7 @@ reviews = []
 if len(movie_name) > 0:
   reviews = st.text_area(
     "Enter movie reviews ✍️ below 👇",
-    placeholder="Enter one review per line. Example: \nThe movie was fun.\nIt was disappointing.\nThe movie had great VFX",
+    placeholder="Enter one review per line. Example: \nThe movie was fun.\nIt was disappointing.",
     key="reviews",
   )
 
