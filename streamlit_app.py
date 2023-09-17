@@ -7,7 +7,7 @@ import sklearn
 # Get User Input
 movie_name = st.text_input(
   "Enter the name of the move here",
-  placeholder="Enter the movie name.",
+  placeholder="Enter the movie name",
   key="moviename"
 )
 reviews = []
