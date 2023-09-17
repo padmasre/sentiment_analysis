@@ -35,7 +35,7 @@ if len(reviews) > 0:
       columns=['Positive', 'Negative'])
   st.bar_chart(
     chart_data,
-    y=['positive', 'negative'],
+    y=['Positive', 'Negative'],
     color=['#FF0000','#0000FF']
   )
   for i in review_predictions:
