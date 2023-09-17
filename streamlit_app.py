@@ -31,7 +31,7 @@ if len(reviews) > 0:
   total_review = len(reviews)
   st.write("No of Positive and Negative reviews")
   chart_data = pd.DataFrame(
-      [[positive_reviews, 0],[negative_reviews, 0]],
+      [[positive_reviews, 0],[0, negative_reviews]],
       columns=['Positive', 'Negative'])
   st.bar_chart(
     chart_data,
