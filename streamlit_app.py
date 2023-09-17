@@ -42,7 +42,7 @@ if len(reviews) > 0:
       columns=['Sentiment', 'Count'])
   st.bar_chart(
     chart_data,
-    x='Count'
+    x='Count',
     y='Sentiment'
   )
   # for i in review_predictions:
