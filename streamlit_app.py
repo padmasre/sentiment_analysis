@@ -31,12 +31,11 @@ if len(reviews) > 0:
   total_review = len(reviews)
   st.write("No of Positive and Negative reviews")
   chart_data = pd.DataFrame(
-      [['Positive', positive_reviews],['Negative', negative_reviews]],
-      columns=['Sentiment', 'Count'])
+      [[positive_reviews, 0],[negative_reviews, 0]],
+      columns=['Positive', 'Negative'])
   st.bar_chart(
     chart_data,
-    x='Sentiment',
-    y='Count',
+    y=['Positive', 'Negative'],
   )
   for i in review_predictions:
     if i == 1:
