@@ -8,7 +8,7 @@ with st.sidebar:
   st_button('linkedin', 'https://www.linkedin.com/in/padmasreers', 'linkedin.com/in/padmasreers', 20)
   st_button('github', 'https://github.com/padmasre/sentiment_analysis', 'github.com/padmasre/sentiment_analysis', 20)
 
-text_input = st.text_input(
+text_input = st.text_area(
   "Enter your movie review below 👇",
   placeholder="The movie was fun to watch with family",
   key="userinput",
