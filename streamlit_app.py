@@ -7,7 +7,7 @@ with st.sidebar:
 
 text_input = st.text_input(
   "Enter your movie review below 👇",
-  "The movie was fun to watch with family",
+  placeholder="The movie was fun to watch with family",
   key="userinput",
 )
 
