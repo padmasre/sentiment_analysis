@@ -24,7 +24,8 @@ if len(reviews) > 0:
   model = pickle.load(open(f'model/model.pkl', 'rb'))
   reviews = reviews.split("\n")
   review_predictions = model.predict(reviews).tolist()
-  
+  with st.spinner("Loading..."):
+      time.sleep(2)
   positive_reviews = review_predictions.count(1)
   negative_reviews = review_predictions.count(0)
   st.markdown("⭐Results⭐")
@@ -49,5 +50,6 @@ if len(reviews) > 0:
 ##########################################################
 # Personal profile links
 with st.sidebar:
-  st_button('linkedin', 'https://www.linkedin.com/in/padmasree5', 'linkedin.com/in/padmasreers', 20)
-  st_button('github', 'https://github.com/padmasre/sentiment_analysis', 'github.com/padmasre/sentiment_analysis', 20)
+  st.markdown('*Links to my profiles* 👇')
+  st_button('linkedin', 'https://www.linkedin.com/in/padmasree5', '/padmasreers', 20)
+  st_button('github', 'https://github.com/padmasre/sentiment_analysis', '/padmasre/sentiment_analysis', 20)
