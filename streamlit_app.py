@@ -22,7 +22,7 @@ if len(movie_name) > 0:
 if len(reviews) > 0:
   model = pickle.load(open(f'model/model.pkl', 'rb'))
   reviews = reviews.split("\n")
-  print(reviews)
+  st.write(reviews)
   reviews_df = pd.DataFrame(reviews)
   reviews_series = reviews_df.iloc[0,:]
   predictions = model.predict(reviews_series).tolist()
