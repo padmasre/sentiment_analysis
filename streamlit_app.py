@@ -6,7 +6,7 @@ import time
 
 
 # Get User Input
-st.markdown("## Sentiment Analysis of Movie Reviews using Machine Learning")
+st.markdown("### Sentiment Analysis of Movie Reviews using Machine Learning")
 movie_name = st.text_input(
   "Enter the name of the movie 🎥",
   placeholder="Movie name",
